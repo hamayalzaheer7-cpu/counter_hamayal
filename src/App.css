@@ -1,0 +1,174 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+/* Light and dark themes */
+.light {
+  background: #f3eae2;
+  color: #4a2928;
+}
+
+.dark {
+  background: #211718;
+  color: #f8eee8;
+}
+
+/* Main counter box */
+.counter {
+  width: 430px;
+  max-width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background: #fffaf4;
+  box-shadow: 0 10px 35px #512d3220;
+  margin: auto;
+}
+
+.dark .counter {
+  background: #392a2b;
+}
+
+/* Heading */
+.tag {
+  color: #a16d62;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.counter h2 {
+  font-size: 29px;
+}
+
+.subtitle {
+  color: #a18c82;
+  font-size: 15px;
+  margin-top: 9px;
+}
+
+/* Counter number */
+.number {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 500;
+  color: #783b40;
+  margin: 35px 0;
+  line-height: 1.2;
+}
+
+.dark .number {
+  color: #d6a0a0;
+}
+
+/* Counter buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  background: #783b40;
+  color: white;
+  padding: 13px 19px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #54282e;
+}
+
+/* Divider */
+.line {
+  border-top: 1px solid #e9d9d1;
+  margin: 28px 0;
+}
+
+/* Settings */
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 16px;
+}
+
+.small-btn {
+  padding: 10px 17px;
+  font-size: 14px;
+  background: #eadbd2;
+  color: #713b40;
+}
+
+.small-btn:hover {
+  background: #dcc5ba;
+}
+
+.dark .small-btn {
+  background: #67474a;
+  color: white;
+}
+
+/* Information */
+.info {
+  background: #f0e3da;
+  color: #654047;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.dark .info {
+  background: #514044;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #a18c82;
+  margin-top: 30px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .counter {
+    width: 100%;
+    padding: 28px;
+  }
+
+  .counter h2 {
+    font-size: 24px;
+  }
+
+  .number {
+    font-size: 80px;
+  }
+
+  .buttons button {
+    padding: 11px 14px;
+  }
+}
