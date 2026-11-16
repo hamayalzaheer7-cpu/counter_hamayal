@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(() => getSavedData());
 
-  // Count change hone par localStorage mein save hoga
   useEffect(() => {
     saveData(count);
   }, [count]);
@@ -15,7 +14,7 @@ function App() {
     setCount(count + 1);
   }
 
-  // Counter decrease, zero se neeche nahi jayega
+  // Counter decrease
   function decrease() {
     if (count > 0) {
       setCount(count - 1);
@@ -30,9 +29,7 @@ function App() {
   return (
     <div className="app">
       <nav>
-        <h2>
-          Countly<span>.</span>
-        </h2>
+        <h2>Counter</h2>
         <p>MY LITTLE COUNTER</p>
       </nav>
 
@@ -40,7 +37,7 @@ function App() {
         <div className="intro">
           <p className="small-heading">KEEP IT SIMPLE</p>
           <h1>One step at a time.</h1>
-          <p className="subtitle">A simple space to track your progress.</p>
+          <p className="subtitle">A simple space for counter.</p>
         </div>
 
         <section className="counter-area">
@@ -59,15 +56,9 @@ function App() {
             Reset Counter
           </button>
         </section>
-
-        <div className="bottom-text">
-          <span>01</span>
-          <p>Small progress is still progress.</p>
-          <span>♡</span>
-        </div>
       </main>
 
-      <footer>MADE WITH REACT</footer>
+      <footer>Hamayal Zaheer</footer>
     </div>
   );
 }

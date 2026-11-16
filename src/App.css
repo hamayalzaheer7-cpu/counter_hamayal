@@ -131,19 +131,6 @@ main {
   background: #f0dadd;
 }
 
-/* Bottom note */
-.bottom-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  color: #a58e94;
-  font-size: 12px;
-}
-
-.bottom-text span {
-  color: #bd7f90;
-}
 
 footer {
   text-align: center;
