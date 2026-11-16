@@ -3,70 +3,71 @@ import { getSavedData, saveData } from "./storage";
 import "./App.css";
 
 function App() {
-  // Get previously saved counter and theme
-  const savedData = getSavedData();
+  const [count, setCount] = useState(() => getSavedData());
 
-  // Store counter and settings
-  const [count, setCount] = useState(savedData.count);
-  const [darkMode, setDarkMode] = useState(savedData.darkMode);
-  const [showInfo, setShowInfo] = useState(false);
-
-  // Save data whenever counter or theme changes
+  // Count change hone par localStorage mein save hoga
   useEffect(() => {
-    saveData({ count, darkMode });
-  }, [count, darkMode]);
+    saveData(count);
+  }, [count]);
+
+  // Counter increase
+  function increase() {
+    setCount(count + 1);
+  }
+
+  // Counter decrease, zero se neeche nahi jayega
+  function decrease() {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  }
+
+  // Counter reset
+  function reset() {
+    setCount(0);
+  }
 
   return (
-    <div className={darkMode ? "app dark" : "app light"}>
-      <div className="counter">
-        <p className="tag">MY COUNTER</p>
+    <div className="app">
+      <nav>
+        <h2>
+          Countly<span>.</span>
+        </h2>
+        <p>MY LITTLE COUNTER</p>
+      </nav>
 
-        <h2>Daily Counter</h2>
-        <p className="subtitle">Keep track of your progress.</p>
-
-        {/* Display counter value */}
-        <div className="number">{count}</div>
-
-        {/* Counter buttons */}
-        <div className="buttons">
-          <button onClick={() => setCount(count + 1)}>Increase</button>
-
-          <button onClick={() => setCount(Math.max(0, count - 1))}>
-            Decrease
-          </button>
-
-          <button onClick={() => setCount(0)}>Reset</button>
+      <main>
+        <div className="intro">
+          <p className="small-heading">KEEP IT SIMPLE</p>
+          <h1>One step at a time.</h1>
+          <p className="subtitle">A simple space to track your progress.</p>
         </div>
 
-        <div className="line"></div>
+        <section className="counter-area">
+          <div className="count-label">CURRENT COUNT</div>
 
-        {/* Show or hide information */}
-        <div className="setting">
-          <span>Information</span>
+          <h2>{count}</h2>
 
-          <button className="small-btn" onClick={() => setShowInfo(!showInfo)}>
-            {showInfo ? "Hide" : "Show"}
+          <p className="count-message">Every step counts.</p>
+
+          <div className="buttons">
+            <button onClick={decrease}>−</button>
+            <button onClick={increase}>+</button>
+          </div>
+
+          <button className="reset-btn" onClick={reset}>
+            Reset Counter
           </button>
+        </section>
+
+        <div className="bottom-text">
+          <span>01</span>
+          <p>Small progress is still progress.</p>
+          <span>♡</span>
         </div>
+      </main>
 
-        {showInfo && (
-          <p className="info">
-            Your counter value is saved automatically. You can continue from
-            where you left.
-          </p>
-        )}
-
-        {/* Change display theme */}
-        <div className="setting">
-          <span>Display Theme</span>
-
-          <button className="small-btn" onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
-        </div>
-
-        <p className="footer">Simple things, steady progress.</p>
-      </div>
+      <footer>MADE WITH REACT</footer>
     </div>
   );
 }

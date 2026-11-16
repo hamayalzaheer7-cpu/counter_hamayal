@@ -1,174 +1,179 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
 .app {
   min-height: 100vh;
-  width: 100%;
+  background: #f2eff8;
+  color: #302b3b;
+  padding: 25px 9%;
+}
+
+/* Navbar */
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 15px;
-  font-family: Arial, sans-serif;
-  transition: 0.3s;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d3e5;
 }
 
-/* Light and dark themes */
-.light {
-  background: #f3eae2;
-  color: #4a2928;
+nav h2 {
+  font-size: 25px;
 }
 
-.dark {
-  background: #211718;
-  color: #f8eee8;
+nav h2 span {
+  color: #9176bd;
 }
 
-/* Main counter box */
-.counter {
-  width: 430px;
-  max-width: 100%;
-  padding: 40px;
-  border-radius: 20px;
-  background: #fffaf4;
-  box-shadow: 0 10px 35px #512d3220;
-  margin: auto;
-}
-
-.dark .counter {
-  background: #392a2b;
-}
-
-/* Heading */
-.tag {
-  color: #a16d62;
-  font-size: 12px;
+nav p {
+  font-size: 10px;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  color: #938aa2;
 }
 
-.counter h2 {
-  font-size: 29px;
+/* Main content */
+main {
+  max-width: 850px;
+  margin: 65px auto 40px;
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+
+.small-heading {
+  color: #9279bb;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.intro h1 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 12px 0;
 }
 
 .subtitle {
-  color: #a18c82;
-  font-size: 15px;
-  margin-top: 9px;
+  color: #938aa2;
+  font-size: 14px;
 }
 
-/* Counter number */
-.number {
+/* Counter */
+.counter-area {
+  background: #ffffff;
+  padding: 45px 25px;
   text-align: center;
-  font-size: 100px;
-  font-weight: 500;
-  color: #783b40;
-  margin: 35px 0;
-  line-height: 1.2;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px #43345c0d;
 }
 
-.dark .number {
-  color: #d6a0a0;
+.count-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #938aa2;
+}
+
+.counter-area h2 {
+  font-size: 115px;
+  font-weight: 400;
+  color: #8467b2;
+  margin: 10px 0;
+}
+
+.count-message {
+  color: #aaa2b5;
+  font-size: 13px;
 }
 
 /* Counter buttons */
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-button {
-  border: none;
-  background: #783b40;
-  color: white;
-  padding: 13px 19px;
-  font-size: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button:hover {
-  background: #54282e;
-}
-
-/* Divider */
-.line {
-  border-top: 1px solid #e9d9d1;
-  margin: 28px 0;
-}
-
-/* Settings */
-.setting {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-top: 22px;
-  font-size: 16px;
-}
-
-.small-btn {
-  padding: 10px 17px;
-  font-size: 14px;
-  background: #eadbd2;
-  color: #713b40;
-}
-
-.small-btn:hover {
-  background: #dcc5ba;
-}
-
-.dark .small-btn {
-  background: #67474a;
-  color: white;
-}
-
-/* Information */
-.info {
-  background: #f0e3da;
-  color: #654047;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-top: 12px;
-  line-height: 1.5;
-}
-
-.dark .info {
-  background: #514044;
-  color: white;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  font-size: 13px;
-  color: #a18c82;
+  gap: 15px;
   margin-top: 30px;
 }
 
-/* Mobile responsive */
-@media (max-width: 480px) {
-  .counter {
-    width: 100%;
-    padding: 28px;
+.buttons button {
+  width: 55px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #8a70b5;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #6d5596;
+}
+
+.reset-btn {
+  margin-top: 18px;
+  padding: 11px 22px;
+  background: #eee9f5;
+  color: #6d5596;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #e2d9ef;
+}
+
+/* Bottom note */
+.bottom-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  color: #938aa2;
+  font-size: 12px;
+}
+
+.bottom-text span {
+  color: #9279bb;
+}
+
+footer {
+  text-align: center;
+  color: #aaa2b5;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
   }
 
-  .counter h2 {
-    font-size: 24px;
+  main {
+    margin-top: 45px;
   }
 
-  .number {
-    font-size: 80px;
+  .intro h1 {
+    font-size: 30px;
   }
 
-  .buttons button {
-    padding: 11px 14px;
+  .counter-area {
+    padding: 35px 15px;
+  }
+
+  .counter-area h2 {
+    font-size: 90px;
+  }
+
+  nav p {
+    font-size: 8px;
   }
 }

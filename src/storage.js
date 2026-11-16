@@ -1,19 +1,13 @@
-// Counter ki saved value get karna
 export function getSavedData() {
-  const data = localStorage.getItem("counterData");
+  const data = localStorage.getItem("myCounter");
 
-  if (data) {
+  if (data !== null) {
     return JSON.parse(data);
   }
 
-  // Agar pehli dafa website open ho
-  return {
-    count: 0,
-    darkMode: false,
-  };
+  return 0;
 }
 
-// Counter aur theme save karna
-export function saveData(data) {
-  localStorage.setItem("counterData", JSON.stringify(data));
+export function saveData(count) {
+  localStorage.setItem("myCounter", JSON.stringify(count));
 }
