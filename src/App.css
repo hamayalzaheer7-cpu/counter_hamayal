@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +11,8 @@ body {
 
 .app {
   min-height: 100vh;
-  background: #f2eff8;
-  color: #302b3b;
+  background: #fff8f7;
+  color: #49383c;
   padding: 25px 9%;
 }
 
@@ -21,21 +22,22 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #d9d3e5;
+  border-bottom: 1px solid #f0dddd;
 }
 
 nav h2 {
   font-size: 25px;
+  letter-spacing: 1px;
 }
 
 nav h2 span {
-  color: #9176bd;
+  color: #c77f91;
 }
 
 nav p {
   font-size: 10px;
   letter-spacing: 2px;
-  color: #938aa2;
+  color: #ae9298;
 }
 
 /* Main content */
@@ -49,7 +51,7 @@ main {
 }
 
 .small-heading {
-  color: #9279bb;
+  color: #bd7f90;
   font-size: 11px;
   letter-spacing: 3px;
 }
@@ -58,41 +60,41 @@ main {
   font-size: 38px;
   font-weight: 500;
   margin: 12px 0;
+  color: #513b42;
 }
 
 .subtitle {
-  color: #938aa2;
+  color: #a58e94;
   font-size: 14px;
 }
 
-/* Counter */
+/* Counter area */
 .counter-area {
-  background: #ffffff;
+  background: #f5e5e7;
   padding: 45px 25px;
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px #43345c0d;
+  border-radius: 4px;
 }
 
 .count-label {
   font-size: 11px;
   letter-spacing: 3px;
-  color: #938aa2;
+  color: #a47b84;
 }
 
 .counter-area h2 {
   font-size: 115px;
   font-weight: 400;
-  color: #8467b2;
+  color: #b76f82;
   margin: 10px 0;
 }
 
 .count-message {
-  color: #aaa2b5;
+  color: #a58e94;
   font-size: 13px;
 }
 
-/* Counter buttons */
+/* Buttons */
 .buttons {
   display: flex;
   justify-content: center;
@@ -104,29 +106,29 @@ main {
   width: 55px;
   height: 48px;
   border: none;
-  border-radius: 8px;
-  background: #8a70b5;
+  border-radius: 4px;
+  background: #b76f82;
   color: white;
   font-size: 25px;
   cursor: pointer;
 }
 
 .buttons button:hover {
-  background: #6d5596;
+  background: #99576a;
 }
 
 .reset-btn {
   margin-top: 18px;
   padding: 11px 22px;
-  background: #eee9f5;
-  color: #6d5596;
-  border: none;
-  border-radius: 6px;
+  background: #fff8f7;
+  color: #99576a;
+  border: 1px solid #e8c9d0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .reset-btn:hover {
-  background: #e2d9ef;
+  background: #f0dadd;
 }
 
 /* Bottom note */
@@ -135,17 +137,17 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-  color: #938aa2;
+  color: #a58e94;
   font-size: 12px;
 }
 
 .bottom-text span {
-  color: #9279bb;
+  color: #bd7f90;
 }
 
 footer {
   text-align: center;
-  color: #aaa2b5;
+  color: #b49da2;
   font-size: 10px;
   letter-spacing: 2px;
   padding: 20px;
@@ -177,3 +179,4 @@ footer {
     font-size: 8px;
   }
 }
+
