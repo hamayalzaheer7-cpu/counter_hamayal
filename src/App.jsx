@@ -1,10 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { getSavedData, saveData } from "./storage";
 import "./App.css";
 
 function App() {
-
   const [count, setCount] = useState(() => getSavedData());
 
   const [showInfo, setShowInfo] = useState(false);
@@ -68,9 +66,7 @@ function App() {
           {/* Information sirf tab show hogi jab showInfo true hoga */}
           {showInfo && (
             <div className="info-box">
-              <p>
-                This is a counter app!
-              </p>
+              <p>This is a counter app!</p>
             </div>
           )}
         </section>
