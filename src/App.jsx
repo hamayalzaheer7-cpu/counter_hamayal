@@ -4,33 +4,44 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(() => getSavedData());
-
   const [showInfo, setShowInfo] = useState(false);
+
+  // Dark mode false ka matlab Light Theme hai
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     saveData(count);
   }, [count]);
 
+  // Counter increase
   function increase() {
     setCount(count + 1);
   }
 
+  // Counter decrease, zero se neeche nahi jayega
   function decrease() {
     if (count > 0) {
       setCount(count - 1);
     }
   }
 
+  // Counter reset
   function reset() {
     setCount(0);
   }
 
+  // Information show/hide
   function toggleInfo() {
     setShowInfo(!showInfo);
   }
 
+  // Light aur Dark theme change
+  function toggleTheme() {
+    setDarkMode(!darkMode);
+  }
+
   return (
-    <div className="app">
+    <div className={darkMode ? "app dark" : "app"}>
       <nav>
         <h2>Click</h2>
         <p>MY LITTLE COUNTER</p>
@@ -58,12 +69,10 @@ function App() {
             Reset Counter
           </button>
 
-          {/* Information show/hide button */}
           <button className="info-btn" onClick={toggleInfo}>
             {showInfo ? "Hide Information" : "Show Information"}
           </button>
 
-          {/* Information sirf tab show hogi jab showInfo true hoga */}
           {showInfo && (
             <div className="info-box">
               <p>This is a counter app!</p>
@@ -71,6 +80,10 @@ function App() {
           )}
         </section>
       </main>
+
+      <button className="theme-btn" onClick={toggleTheme}>
+        {darkMode ? "☀ Light Mode" : "☾ Dark Mode"}
+      </button>
 
       <footer>Hamayal Zaheer</footer>
     </div>

@@ -13,9 +13,9 @@ body {
   background: #fff8f7;
   color: #49383c;
   padding: 25px 9%;
+  transition: 0.3s;
 }
 
-/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -26,15 +26,14 @@ nav {
 
 nav h2 {
   font-size: 25px;
-  letter-spacing: 1px;
 }
+
 nav p {
   font-size: 10px;
   letter-spacing: 2px;
   color: #ae9298;
 }
 
-/* Main content */
 main {
   max-width: 850px;
   margin: 65px auto 40px;
@@ -48,15 +47,14 @@ main {
   font-size: 38px;
   font-weight: 500;
   margin: 12px 0;
-  color: #513b42;
 }
 
-.subtitle {
+.subtitle,
+.count-message {
   color: #a58e94;
   font-size: 14px;
 }
 
-/* Counter area */
 .counter-area {
   background: #f5e5e7;
   padding: 45px 25px;
@@ -77,12 +75,6 @@ main {
   margin: 10px 0;
 }
 
-.count-message {
-  color: #a58e94;
-  font-size: 13px;
-}
-
-/* Counter buttons */
 .buttons {
   display: flex;
   justify-content: center;
@@ -98,41 +90,41 @@ main {
   background: #b76f82;
   color: white;
   font-size: 25px;
+  cursor: pointer;
 }
 
-.buttons button:hover {
-  background: #99576a;
-}
-
-.reset-btn {
-  margin-top: 18px;
-  padding: 11px 22px;
-  background: #fff8f7;
-  color: #99576a;
-  border: 1px solid #e8c9d0;
-  border-radius: 4px;
-}
-
-.reset-btn:hover {
-  background: #f0dadd;
-}
-
-/* Show/Hide Information button */
-.info-btn {
-  display: block;
-  margin: 15px auto 0;
-  padding: 11px 22px;
-  background: #b76f82;
-  color: white;
-  border: none;
-  border-radius: 4px;
-}
-
+.buttons button:hover,
 .info-btn:hover {
   background: #99576a;
 }
 
-/* Information box */
+.reset-btn,
+.info-btn,
+.theme-btn {
+  margin-top: 18px;
+  padding: 11px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background: #fff8f7;
+  color: #99576a;
+  border: 1px solid #e8c9d0;
+}
+
+.info-btn,
+.theme-btn {
+  background: #b76f82;
+  color: white;
+  border: none;
+}
+
+.info-btn {
+  display: block;
+  margin: 15px auto 0;
+}
+
 .info-box {
   max-width: 500px;
   margin: 25px auto 0;
@@ -140,12 +132,16 @@ main {
   background: #fff8f7;
   border: 1px solid #e8c9d0;
   border-radius: 5px;
-  line-height: 1.7;
 }
 
 .info-box p {
   color: #8e737a;
   font-size: 13px;
+}
+
+.theme-btn {
+  display: block;
+  margin: 20px auto;
 }
 
 footer {
@@ -156,7 +152,53 @@ footer {
   padding: 20px;
 }
 
-/* Mobile */
+/* Dark theme ki styling */
+.app.dark {
+  background: #222126;
+  color: #f7edf0;
+}
+
+.dark nav {
+  border-bottom-color: #48414a;
+}
+
+.dark nav p,
+.dark .subtitle,
+.dark .count-message {
+  color: #c0aeb8;
+}
+
+.dark .intro h1 {
+  color: #f7edf0;
+}
+
+.dark .counter-area {
+  background: #39323d;
+}
+
+.dark .count-label {
+  color: #d0a7b6;
+}
+
+.dark .counter-area h2 {
+  color: #e6a4bc;
+}
+
+.dark .reset-btn,
+.dark .info-box {
+  background: #29252d;
+  color: #f7edf0;
+  border-color: #65515e;
+}
+
+.dark .info-box p {
+  color: #d7c5cf;
+}
+
+.dark footer {
+  color: #bdaab5;
+}
+
 @media (max-width: 600px) {
   .app {
     padding: 20px;
