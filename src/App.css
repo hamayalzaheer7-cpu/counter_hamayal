@@ -28,11 +28,6 @@ nav h2 {
   font-size: 25px;
   letter-spacing: 1px;
 }
-
-nav h2 span {
-  color: #c77f91;
-}
-
 nav p {
   font-size: 10px;
   letter-spacing: 2px;
@@ -103,7 +98,6 @@ main {
   background: #b76f82;
   color: white;
   font-size: 25px;
-  cursor: pointer;
 }
 
 .buttons button:hover {
@@ -117,7 +111,6 @@ main {
   color: #99576a;
   border: 1px solid #e8c9d0;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .reset-btn:hover {
@@ -133,7 +126,6 @@ main {
   color: white;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .info-btn:hover {
